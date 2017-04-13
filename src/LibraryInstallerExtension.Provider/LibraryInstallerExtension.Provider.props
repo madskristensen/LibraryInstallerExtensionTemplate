@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+    <PropertyGroup>
+        <_MyProvider Condition="'$(MSBuildRuntimeType)' == 'Core'">$(MSBuildThisFileDirectory)..\tools\netstandard1.5\LibraryInstallerExtension.Provider.dll</_MyProvider>
+        <_MyProvider Condition="'$(MSBuildRuntimeType)' != 'Core'">$(MSBuildThisFileDirectory)..\tools\net46\LibraryInstallerExtension.Provider.dll</_MyProvider>
+
+        <LibraryProviderAssemblies>
+            $(_MyProvider);
+            $(LibraryProviderAssemblies)
+        </LibraryProviderAssemblies>
+    </PropertyGroup>
+</Project>
