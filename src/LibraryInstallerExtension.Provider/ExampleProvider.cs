@@ -1,5 +1,4 @@
 ﻿using Microsoft.Web.LibraryInstaller.Contracts;
-using Microsoft.Web.LibraryInstaller;
 using System;
 using System.IO;
 using System.Threading;
@@ -7,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LibraryInstallerExtension.Provider
 {
-    public class Provider : IProvider
+    public class ExampleProvider : IProvider
     {
         public string Id => "example";
 
@@ -15,7 +14,7 @@ namespace LibraryInstallerExtension.Provider
 
         public ILibraryCatalog GetCatalog()
         {
-            return null;
+            return new ExampleCatalog(Id);
         }
 
         public async Task<ILibraryInstallationResult> InstallAsync(ILibraryInstallationState desiredState, CancellationToken cancellationToken)

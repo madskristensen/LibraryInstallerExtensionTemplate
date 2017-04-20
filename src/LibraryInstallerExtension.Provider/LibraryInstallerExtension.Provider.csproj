@@ -16,8 +16,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.Web.LibraryInstaller" Version="1.0.0-alpha" PrivateAssets="All" />
-        <PackageReference Include="Microsoft.Web.LibraryInstaller.Contracts" Version="1.0.0-alpha" PrivateAssets="All" />
         <Reference Include="System.ComponentModel.Composition" Condition="'$(TargetFramework)' != 'netstandard1.5'" />
     </ItemGroup>
 
@@ -26,6 +24,10 @@
             <PackagePath>build</PackagePath>
             <Pack>true</Pack>
         </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Web.LibraryInstaller.Contracts" Version="1.0.0-alpha" PrivateAssets="All" />
     </ItemGroup>
 
     <Target Name="PackTaskDependencies" BeforeTargets="GenerateNuspec">

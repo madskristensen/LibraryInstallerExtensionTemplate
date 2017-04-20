@@ -10,11 +10,11 @@ namespace LibraryInstallerExtension.Provider
 #if NET46
     [Export(typeof(IProviderFactory))]
 #endif
-    public class ProviderFactory : IProviderFactory
+    public class ExampleProviderFactory : IProviderFactory
     {
         public IProvider CreateProvider(IHostInteraction hostInteraction)
         {
-            var provider = new Provider();
+            var provider = new ExampleProvider();
             string storePath = Path.Combine(hostInteraction.CacheDirectory, provider.Id);
             provider.HostInteraction = hostInteraction;
             return provider;
