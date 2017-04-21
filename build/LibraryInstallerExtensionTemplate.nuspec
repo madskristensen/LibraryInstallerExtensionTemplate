@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+    <metadata>
+        <id>LibraryInstallerExtensionTemplate</id>
+        <version>1.0.0</version>
+        <description>A project template for building Library Installer extensions</description>
+        <authors>Mads Kristensen</authors>
+        <projectUrl>https://github.com/madskristensen/LibraryInstallerExtensionTemplate</projectUrl>
+        <tags>extensibility vssdk vsix</tags>
+    </metadata>
+
+    <files>
+        <file src="..\src\**\*.*" exclude="**\bin\**\*;**\obj\**\*;**\*.user" target="content" />
+        <file src="..\ExampleLibraryInstaller.sln" target="content" />
+    </files>
+</package>

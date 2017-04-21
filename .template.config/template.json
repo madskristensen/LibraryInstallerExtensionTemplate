@@ -1,0 +1,24 @@
+{
+  "author": "Mads Kristensen",
+  "classifications": [ "Extensibility", "Vsix" ],
+  "name": "Library Installer Extension",
+  "identity": "madsk.examplelibraryinstaller",
+  "shortName": "libext",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "ExampleLibraryInstaller",
+  "preferNameDirectory": "true",
+  "sources": [
+    {
+      "include": [ "src/**", "ExampleLibraryInstaller.sln" ]
+    }
+  ],
+  "guids": [
+    "25e0d980-2418-4763-8740-0f51d298e290", // vsix product guid
+    "8a1873d7-c7cb-4c68-a798-d930ac073b49", // package guid
+    "ceff2915-6c59-45bd-a2de-26253f239fb4", // assembly guid
+    "927528E7-79D9-48E1-A0CD-55C8313F630F" // project guid
+  ]
+}
