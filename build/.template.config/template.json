@@ -12,7 +12,7 @@
   "preferNameDirectory": "true",
   "sources": [
     {
-      "include": [ "src/**", "ExampleLibraryInstaller.sln" ]
+      "include": [ "ExampleLibraryInstaller*/**", "../ExampleLibraryInstaller.sln" ]
     }
   ],
   "guids": [
