@@ -2,7 +2,7 @@
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
         <Identity Id="25e0d980-2418-4763-8740-0f51d298e290" Version="1.0" Language="en-US" Publisher="Author Name" />
-        <DisplayName>Library Installer Extension Example</DisplayName>
+        <DisplayName>ExampleLibraryInstaller</DisplayName>
         <Description xml:space="preserve">An example Library Installer extension.</Description>
         <Icon>Resources\Icon.png</Icon>
         <PreviewImage>Resources\Icon.png</PreviewImage>

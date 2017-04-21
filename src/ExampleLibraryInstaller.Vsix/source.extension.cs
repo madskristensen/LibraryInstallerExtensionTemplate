@@ -8,7 +8,7 @@ namespace ExampleLibraryInstaller.Vsix
     static class Vsix
     {
         public const string Id = "25e0d980-2418-4763-8740-0f51d298e290";
-        public const string Name = "Library Installer Extension Example";
+        public const string Name = "ExampleLibraryInstaller";
         public const string Description = @"An example Library Installer extension.";
         public const string Language = "en-US";
         public const string Version = "1.0";

@@ -8,7 +8,7 @@ namespace ExampleLibraryInstaller.Provider
 {
     public class Provider : IProvider
     {
-        public string Id => "example";
+        public string Id => "ExampleLibraryInstaller";
 
         public IHostInteraction HostInteraction { get; set; }
 
