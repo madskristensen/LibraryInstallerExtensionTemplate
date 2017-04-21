@@ -10,6 +10,8 @@ namespace ExampleLibraryInstaller.Provider
     {
         public string Id => "ExampleLibraryInstaller";
 
+        public string NuGetPackageId { get; } = "ExampleLibraryInstaller.Provider";
+
         public IHostInteraction HostInteraction { get; set; }
 
         public ILibraryCatalog GetCatalog()

@@ -9,7 +9,7 @@
         <authors>Mads Kristensen</authors>
         <projectUrl>https://github.com/madskristensen/LibraryInstallerExtensionTemplate</projectUrl>
         <tags>extensibility vssdk vsix</tags>
-        <iconUrl>https://github.com/aspnet/LibraryInstaller/raw/master/src/LibraryInstaller.Vsix/Resources/Icon.png[]</iconUrl>
+        <iconUrl>https://github.com/aspnet/LibraryInstaller/raw/master/src/LibraryInstaller.Vsix/Resources/Icon.png</iconUrl>
     </metadata>
 
     <files>
