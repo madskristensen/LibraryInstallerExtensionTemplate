@@ -14,6 +14,7 @@
 
     <files>
         <file src="..\src\**\*.*" exclude="**\bin\**\*;**\obj\**\*;**\*.user" target="content" />
+        <file src="..\.template.config\**\*.*" target="content\.template.config" />
         <file src="..\ExampleLibraryInstaller.sln" target="content" />
     </files>
 </package>
