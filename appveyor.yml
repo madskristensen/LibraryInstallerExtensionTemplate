@@ -1,0 +1,28 @@
+image: Visual Studio 2017
+
+install:
+  - ps: (new-object Net.WebClient).DownloadString("https://raw.github.com/madskristensen/ExtensionScripts/master/AppVeyor/vsix.ps1") | iex
+  - powershell -NoProfile -ExecutionPolicy unrestricted -Command "&{iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/dotnet/cli/rel/1.0.0/scripts/obtain/dotnet-install.ps1'))}"
+
+before_build:
+#  - ps: Vsix-IncrementVsixVersion | Vsix-UpdateBuildVersion
+  - ps: Vsix-IncrementNuspecVersion .\build\*.nuspec
+
+build_script:
+  - dotnet restore .\ExampleLibraryInstaller.sln
+  - nuget restore .\ExampleLibraryInstaller.sln -Verbosity quiet -PackagesDirectory .\Packages
+  - msbuild ExampleLibraryInstaller.sln /p:configuration=Release /v:m
+  - .\build\build.cmd
+
+artifacts:
+  - path: build\**\*.nupkg
+    name: NuGet package
+
+deploy:
+  - provider: NuGet
+    artifact: /NuGet/
+    api_key:
+      secure: 6xBu/05BWJDPa2PRkxEH3PHU/caLvy2lzf1eWdRBGXwSCTejHtI+6e0V4s2LaVri
+    on:
+      branch: master
+      appveyor_repo_commit_message_extended: /\[release\]/
