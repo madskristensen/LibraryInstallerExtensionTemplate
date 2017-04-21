@@ -9,9 +9,9 @@ before_build:
   - ps: Vsix-IncrementNuspecVersion .\build\*.nuspec
 
 build_script:
-  - dotnet restore .\ExampleLibraryInstaller.sln
-  - nuget restore .\ExampleLibraryInstaller.sln -Verbosity quiet -PackagesDirectory .\Packages
-  - msbuild ExampleLibraryInstaller.sln /p:configuration=Release /v:m
+#  - dotnet restore .\ExampleLibraryInstaller.sln
+#  - nuget restore .\ExampleLibraryInstaller.sln -Verbosity quiet -PackagesDirectory .\Packages
+#  - msbuild ExampleLibraryInstaller.sln /p:configuration=Release /v:m
   - .\build\build.cmd
 
 artifacts:
